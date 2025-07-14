@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://67hhjfga4uev"]
+
+[ext_resource type="FontFile" uid="uid://dmujoapt02bvc" path="res://STARGATE.TTF" id="1_mf56c"]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "fontTheme"
+default_font = ExtResource("1_mf56c")

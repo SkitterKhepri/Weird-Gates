@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://clcryhaacfne8"]
+
+[ext_resource type="Script" uid="uid://cn3y8u3w1aa07" path="res://options.gd" id="1_ao2gm"]
+[ext_resource type="Texture2D" uid="uid://cts1jl2dvk2mh" path="res://nebula.png" id="1_se8ut"]
+[ext_resource type="Theme" uid="uid://67hhjfga4uev" path="res://theme.tres" id="2_ao2gm"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ao2gm")
+
+[node name="Container" type="MarginContainer" parent="."]
+layout_direction = 2
+layout_mode = 1
+offset_right = 652.744
+offset_bottom = 503.544
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Container"]
+z_index = -1
+layout_mode = 2
+texture = ExtResource("1_se8ut")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="Container"]
+layout_direction = 2
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_ao2gm")
+text = "OPTIONS? WHAT OPTIONS?"
+horizontal_alignment = 1
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="Container"]
+z_index = 1
+z_as_relative = false
+layout_mode = 2
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Back" type="Button" parent="Container/ButtonsVBox"]
+layout_mode = 2
+theme = ExtResource("2_ao2gm")
+text = "BACK"
+
+[connection signal="pressed" from="Container/ButtonsVBox/Back" to="." method="_on_back_pressed"]

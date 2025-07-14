@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://cil0ppf5asfwi"]
+
+[ext_resource type="PackedScene" uid="uid://dw7kdc36by8fb" path="res://map.tscn" id="1_5u2hx"]
+[ext_resource type="Script" uid="uid://0jcnrg5mgxte" path="res://world.gd" id="1_skfx1"]
+[ext_resource type="PackedScene" uid="uid://bnj23hs1rnkhi" path="res://alkesh.tscn" id="2_itc6p"]
+[ext_resource type="PackedScene" uid="uid://y7iku30twemb" path="res://camera.tscn" id="4_nkejh"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_skfx1")
+
+[node name="Map" parent="." instance=ExtResource("1_5u2hx")]
+visible = false
+
+[node name="Alkesh" parent="." instance=ExtResource("2_itc6p")]
+top_level = true
+z_index = 2
+scale = Vector2(0.8, 0.8)
+
+[node name="Camera" parent="." instance=ExtResource("4_nkejh")]
+position = Vector2(579, 323)
+
+[connection signal="done_moving" from="Alkesh" to="." method="_on_alkesh_done_moving"]

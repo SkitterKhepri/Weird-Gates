@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5pjvohfuskev"]
+
+[ext_resource type="Texture2D" uid="uid://bcrntkfp7se1r" path="res://overlay_tile.png" id="1_2v07f"]
+
+[node name="overlayTile" type="Sprite2D"]
+modulate = Color(1, 1, 1, 0.329412)
+texture = ExtResource("1_2v07f")
+centered = false

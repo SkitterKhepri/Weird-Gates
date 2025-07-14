@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bsco45828clse"]
+
+[ext_resource type="TileSet" uid="uid://r0t60w7y6qnx" path="res://tile_map.tres" id="1_3wb2t"]
+
+[node name="Overlay" type="TileMapLayer"]
+z_index = 2
+use_parent_material = true
+tile_set = ExtResource("1_3wb2t")

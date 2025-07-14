@@ -1,0 +1,10 @@
+Ship:
+	-hull
+	-max shield -- osztódik 6 felé?
+	-inertia dampeners -- max speed
+	-thrust -- accelaration / turn -- turnspeed probably should be seperate stat
+	-weapon mounts
+
+main_controller:
+	-optimization - store ship positions in a dictionry (or something like it), so that i dont have to get
+	the scene tree every left click. would need to update it after every move. idk if its worth it

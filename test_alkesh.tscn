@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccewk0badsseh"]
+
+[ext_resource type="Script" uid="uid://j4rol5r0bbnj" path="res://test_alkesh.gd" id="1_ss6kr"]
+[ext_resource type="Texture2D" uid="uid://dvk484rg2p22h" path="res://alkesh_mk1.png" id="2_ldwcn"]
+
+[node name="test_alkesh" type="Node2D"]
+script = ExtResource("1_ss6kr")
+
+[node name="alkesh_sp" type="Sprite2D" parent="."]
+modulate = Color(1, 0.298039, 1, 1)
+z_index = 4
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("2_ldwcn")

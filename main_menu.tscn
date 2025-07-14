@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://bavx7r1tyvjn5"]
+
+[ext_resource type="Theme" uid="uid://67hhjfga4uev" path="res://theme.tres" id="1_c8my5"]
+[ext_resource type="Script" uid="uid://loegqtindeij" path="res://main_menu.gd" id="1_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://cts1jl2dvk2mh" path="res://nebula.png" id="1_ukdwv"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fu7sn")
+
+[node name="MainMenu" type="MarginContainer" parent="."]
+layout_mode = 1
+offset_right = 500.0
+offset_bottom = 500.0
+
+[node name="TextureRect" type="TextureRect" parent="MainMenu"]
+z_index = -1
+layout_mode = 2
+texture = ExtResource("1_ukdwv")
+expand_mode = 1
+
+[node name="ButtonsVBox" type="VBoxContainer" parent="MainMenu"]
+z_index = 1
+z_as_relative = false
+layout_mode = 2
+alignment = 1
+
+[node name="Play" type="Button" parent="MainMenu/ButtonsVBox"]
+layout_mode = 2
+theme = ExtResource("1_c8my5")
+text = "PLAY"
+
+[node name="Options" type="Button" parent="MainMenu/ButtonsVBox"]
+layout_mode = 2
+theme = ExtResource("1_c8my5")
+text = "OPTIONS
+"
+
+[node name="Quit" type="Button" parent="MainMenu/ButtonsVBox"]
+layout_mode = 2
+theme = ExtResource("1_c8my5")
+text = "QUIT"
+
+[connection signal="pressed" from="MainMenu/ButtonsVBox/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="MainMenu/ButtonsVBox/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MainMenu/ButtonsVBox/Quit" to="." method="_on_quit_pressed"]
